@@ -36,7 +36,7 @@ namespace Model
             }
             else
             {
-                throw new Exception($"У водителя {Name} нет прав на вождение автомобилей категории {car.Category}");
+                throw new NoCategoryException($"У водителя {Name} нет прав на вождение автомобилей категории {car.Category}");
             }
         }
     }

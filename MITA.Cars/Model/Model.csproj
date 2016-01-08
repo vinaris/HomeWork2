@@ -44,6 +44,7 @@
     <Compile Include="Car.cs" />
     <Compile Include="CarPassport.cs" />
     <Compile Include="Driver.cs" />
+    <Compile Include="NoCategoryException.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

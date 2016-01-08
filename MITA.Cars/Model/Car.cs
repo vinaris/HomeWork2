@@ -24,9 +24,16 @@ namespace Model
 
         public void ChangeOwner(Driver owner, string carNumber)
         {
-            CarPassport.Owner = owner;
-            owner.OwnCar(this);
-            CarNumber = carNumber;
+            if (owner.Category.Contains(Category))
+            {
+                CarPassport.Owner = owner;
+                owner.OwnCar(this);
+                CarNumber = carNumber;
+            }
+            else
+            {
+                throw new NoCategoryException($"У водителя {owner.Name} нет прав на вождение автомобилей категории {Category}");
+            }
         }
     }
 }

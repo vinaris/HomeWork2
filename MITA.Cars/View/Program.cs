@@ -38,7 +38,7 @@ namespace ConsoleApplication1
             {
                 car.ChangeOwner(driver, carNumber);
             }
-            catch (Exception exception)
+            catch (NoCategoryException exception)
             {
                 Console.WriteLine(exception.Message);
             }
@@ -49,7 +49,7 @@ namespace ConsoleApplication1
             {
                 car.ChangeOwner(driver, carNumber);
             }
-            catch (Exception exception)
+            catch (NoCategoryException exception)
             {
                 Console.WriteLine(exception.Message);
             }
